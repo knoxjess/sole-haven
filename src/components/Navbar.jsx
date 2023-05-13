@@ -2,11 +2,10 @@ import { Search, ShoppingCartOutlined } from '@material-ui/icons';
 import React from 'react'
 import styled from 'styled-components'
 import { Badge } from '@material-ui/core';
-
-
+import Logo from '../assets/img/logo.png'
 
 const Container = styled.div`
-    height: 60px;
+    height: 76px;
     background-color: #005C53;
 `;
 const Wrapper = styled.div`
@@ -21,9 +20,6 @@ const Left = styled.div`
     align-items: center;
     `;
 
-    const Logo = styled.h1`
-    font-weight: bold;
-    `;
 
 const Center = styled.div`
     flex: 1;
@@ -36,9 +32,10 @@ const Center = styled.div`
     border: 0.5px solid lightgray;
     display: flex;
     align-items: center;
-    margin-left: 25px;
+    margin-left: center;
     padding: 3px;
     background-color: #fff;
+    margin-bottom: 40px;
     `;
 
     const Input = styled.input`
@@ -57,8 +54,18 @@ const Right = styled.div`
     cursor: pointer;
     `;
 
+    const ImgContainer = styled.div`
+    /* Styles for the container */
+  `;
+  
+  const CustomLogo = styled.h1`
 
-
+  `;
+  
+  const LogoImage = styled.img`
+    height: 90px; /* Adjust the height as per your preference */
+    width: 150px; /* Adjust the width as per your preference */
+  `;
 
 
 const Navbar = () => {
@@ -66,7 +73,11 @@ const Navbar = () => {
     <Container>
        <Wrapper>
        <Left>
-        <Logo>  <img src="/path/to/image.jpg" /> </Logo>
+       <ImgContainer>
+            <CustomLogo>
+              <LogoImage src={Logo} alt="logo" />
+            </CustomLogo>
+          </ImgContainer>
         </Left>
         <Center>
           <SearchContainer>
