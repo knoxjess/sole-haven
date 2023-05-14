@@ -10,16 +10,23 @@ A third-party website, dedicated to offering a distinct collection of exclusive 
 * [License](#license)
 
 ## Installation
-To install the necessary dependencies, run the following command:
-\`\`\`
-npm i
-\`\`\`
+To install application, clone the main project via the HTTP or SSH link on github.
 
+```
+git clone
+```
+
+2. Once cloned, open up the project folder in your text editor and run the following command in terminal to install all dependencies.
+
+```
+npm install
+```
 ## Usage
 To use this application, run the following command:
-\`\`\`
+
+```
 npm start
-\`\`\`
+```
 
 ## Credits
 * [React](https://reactjs.org/)
