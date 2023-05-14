@@ -50,7 +50,7 @@ const Right = styled.div`
 `;
 
 const MenuItem = styled.div`
-  font-size: 14px;
+  font-size: 17px;
   cursor: pointer;
   color: white;
   margin-left: px;
@@ -70,6 +70,7 @@ const ShoppingCartIcon = styled(ShoppingCartOutlined)`
   color: white; // Change the color to white
   padding-right: 5px; // Optional: Add some padding to the right
   margin-bottom: 10px;
+  cursor: pointer;
 `;
 
 const ImgContainer = styled.div`
