@@ -3,8 +3,8 @@ import styled from "styled-components";
 
 const Container = styled.div`
     height: 20px;
-    background-color: #006E63;
-    color: white;
+    background-color: #D6D9C5;
+    color: black;
     display: flex;
     align-items: center;
     justify-content: center;

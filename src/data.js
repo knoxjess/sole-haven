@@ -30,17 +30,17 @@ export const sliderItems = [
     {
       id: 1,
       img: " ",
-      title: "SHIRT STYLE!",
+      title: "New!",
     },
     {
       id: 2,
       img: " ",
-      title: "LOUNGEWEAR LOVE",
+      title: "IN STOCK",
     },
     {
       id: 3,
       img: " ",
-      title: "LIGHT JACKETS",
+      title: "COMING SOON",
     },
   ];
 
