@@ -1,149 +1,117 @@
-import { ArrowLeftOutlined, ArrowRightOutlined } from '@material-ui/icons';
-import Styled from 'styled-components'
-import one from '../assets/img/one.jpg'
-import two from '../assets/img/two.jpg'
-import three from '../assets/img/three.jpg'
-import four from '../assets/img/four.jpg'
+import { ArrowLeftOutlined, ArrowRightOutlined } from "@material-ui/icons"
+import styled from "styled-components"
+import React, { useState } from 'react';
+import { sliderItems } from "../data"
 
+const Container = styled.div`
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+`
+const Arrow = styled.div`
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: ${props => props.direction === "left" && "10px"};
+  right: ${props => props.direction === "right" && "10px"};
+  margin: auto;
+  cursor: pointer;
+  opacity: 0.5;
+  z-index: 2;
+  `
+  const Wrapper = styled.div`
+  height: 100%;
+  display: flex;
+  transform: translateX(${props => props.slideIndex * -100}vw);
+  transition: all 1.5s ease;
+  `
 
+  const Slide = styled.div`
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: ${props => props.bg};
+  `
+  const ImgContainer = styled.div`
+  height: 100%;
+  flex: 1;
+  `
+  const Image = styled.img`
+  height: 55%;
+  padding-left: 40px;
+  
+  `
+  const InfoContainer = styled.div`
+  flex: 1;
+  padding: 50px;
+  `
+  const Title = styled.h1`
+  font-size: 90px;
 
+  `
+  const Desc = styled.p`
+  font-size: 20px;
+  margin: 10px 0px;
+  letter-spacing: 2px;
 
+  `
+  const Button = styled.button`
+  padding: 8px;
+  font-size: 15px;
+  background-color: transparent;
+  cursor: pointer;
+  background-color: transparent;
 
-const Container = Styled.div`
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    position: relative;
-    text-color: #005C53;
-`;
-
-const Arrow = Styled.div`
-    width: 50px;
-    height: 30px;
-    background-color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: Auto ;
-    position: absolute;
-    top: 0;
-    left: ${props => props.direction === "left" && "10px"};
-    right: ${props => props.direction === "right" && "10px"};
-    bottom: 0;
-    cursor: pointer;
-    opacity: 0.5;
-`;
-
-const Wrapper = Styled.div`
-    height: 100%;
-    margin: auto;
-`;
-
-const Slide = Styled.div`
-    display: flex;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
-    justify-content: center;
-
-`;
-
-const ImgContainer = Styled.div`
-    flex: 1;
-`;
-
-const Image = Styled.img`
-    height:30%;
-    width: 50%;
-    margin-top: 60px;
-`;
-
-const InfoContainer = Styled.div`
-    flex: 1;
-    padding: 0px;
-    text-align: right;
-    margin-right: 50px;
-
-`;
-
-const Title = Styled.h1`
-    font-size: 70px;
-    text-color: #005C53;
-
-`;
-
-const Desc = Styled.p`
-    margin: 10px 0px;
-    font-size: 20px;
-    font-weight: 500;
-    letter-spacing: 3px;
-    text-color: #005C53;
-`;
-
-const Button = Styled.button`
-    font-size: 30px;
-    padding: 10px;
-    cursor: pointer;
-`;
+  `
 
 
 const Slider = () => {
+  const [slideIndex, setSlideIndex] = useState(0)
+  const handleClick = (direction) => {
+
+    if (direction === "left") {
+      setSlideIndex(slideIndex > 0 ? slideIndex - 1 : 2)
+    }
+    else {
+      setSlideIndex(slideIndex < 2 ? slideIndex + 1 : 0)
+
+    }
+  };
   return (
     <Container>
-    <Arrow direction="left" >
+      <Arrow direction="left" onClick={()=>handleClick('left')} >
         <ArrowLeftOutlined />
-    </Arrow>
-    <Wrapper>
-        <slide>
-        <ImgContainer>
-        <Image src={one} alt="" />
-         </ImgContainer>
-        <InfoContainer> 
-            <Title> Sole Haven </Title>
-            <Desc>Embrace the opportunity to acquire remarkable and rare footwear through our website, <br/>
-                where the quest for distinctive style meets convenience</Desc>
-            <Button> Shop Now </Button>
-        </InfoContainer>
-        </slide>
-        <slide>
-        <ImgContainer>
-        <Image src={two} alt="" />
-         </ImgContainer>
-        <InfoContainer> 
-            <Title> Sole Haven </Title>
-            <Desc>Embrace the opportunity to acquire remarkable and rare footwear through our website, <br/>
-                where the quest for distinctive style meets convenience</Desc>
-            <Button> Shop Now </Button>
-        </InfoContainer>
-        </slide>
-        <slide>
-        <ImgContainer>
-        <Image src={three} alt="" />
-         </ImgContainer>
-        <InfoContainer> 
-            <Title> Sole Haven </Title>
-            <Desc>Embrace the opportunity to acquire remarkable and rare footwear through our website, <br/>
-                where the quest for distinctive style meets convenience</Desc>
-            <Button> Shop Now </Button>
-        </InfoContainer>
-        </slide>
-        <slide>
-        <ImgContainer>
-        <Image src={four} alt="" />
-         </ImgContainer>
-        <InfoContainer> 
-            <Title> Sole Haven </Title>
-            <Desc>Embrace the opportunity to acquire remarkable and rare footwear through our website, <br/>
-                where the quest for distinctive style meets convenience</Desc>
-            <Button> Shop Now </Button>
-        </InfoContainer>
-        </slide>
-    </Wrapper>
-    <Arrow direction="right">
-       <ArrowRightOutlined />
-    </Arrow>
+      </Arrow>
+      <Wrapper slideIndex={slideIndex} > 
+        {sliderItems.map(item => (
+        <Slide bg={item.bg} >
+        <ImgContainer> 
+        <Image src={item.img} alt="" />
+        </ImgContainer>
+        <InfoContainer>
+          <Title>{item.title}</Title>
+          <Desc>{item.desc}</Desc>
+          <Button>SHOP NOW</Button>
+           </InfoContainer>
+        </Slide>
+        ))}
+       </Wrapper>
+      <Arrow direction="right" onClick={()=>handleClick('right')}>
+        <ArrowRightOutlined />
+      </Arrow>
+      
     </Container>
+  
   )
 }
 

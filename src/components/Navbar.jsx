@@ -59,6 +59,8 @@ const Right = styled.div`
   `;
   
   const CustomLogo = styled.h1`
+  padding:
+  
 
   `;
   
@@ -68,22 +70,23 @@ const Right = styled.div`
   `;
 
 
+
 const Navbar = () => {
   return (
     <Container>
        <Wrapper>
        <Left>
-       <ImgContainer>
+       <SearchContainer>
+            <Input />
+            <Search style={{color: "gray", fontSize: 16}} />
+          </SearchContainer>
+        </Left>
+        <Center>
+        <ImgContainer>
             <CustomLogo>
               <LogoImage src={Logo} alt="logo" />
             </CustomLogo>
           </ImgContainer>
-        </Left>
-        <Center>
-          <SearchContainer>
-            <Input />
-            <Search style={{color: "gray", fontSize: 16}} />
-          </SearchContainer>
         </Center>
         <Right>
           <MenuItem>REGISTER</MenuItem>
