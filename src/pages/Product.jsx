@@ -87,6 +87,10 @@ border: 2px solid #5f8c58;
 background-color: #fff;
 cursor: pointer;
 font-weight: 500;
+
+&:hover {
+    background-color: #F0F0F2;
+}
 `;
 
 
