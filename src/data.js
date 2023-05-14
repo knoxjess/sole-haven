@@ -1,6 +1,9 @@
 import one from "./assets/img/one.jpg";
 import two from "./assets/img/two.jpg";
 import three from "./assets/img/three.jpg";
+import shoes1 from "./assets/img/shoes1.PNG";
+import shoes2 from "./assets/img/shoes2.PNG";
+import shoes3 from "./assets/img/shoes3.PNG";
 
 
 export const sliderItems = [
@@ -29,17 +32,17 @@ export const sliderItems = [
   export const categories = [
     {
       id: 1,
-      img: " ",
+      img: shoes1 ,
       title: "New!",
     },
     {
       id: 2,
-      img: " ",
+      img: shoes2,
       title: "IN STOCK",
     },
     {
       id: 3,
-      img: " ",
+      img: shoes3,
       title: "COMING SOON",
     },
   ];
