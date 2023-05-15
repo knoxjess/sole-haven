@@ -3,22 +3,27 @@ import React from 'react';
 import styled from 'styled-components';
 import { Badge } from '@material-ui/core';
 import Logo from '../assets/img/logo.png';
+import { mobile } from '../responsive';
 
 const Container = styled.div`
   height: 85px;
   background-color: #5F8C58;
-  $
+  ${mobile({ height: "60px" })} // Adjust the height to 60px on mobile devices
 `;
+
 const Wrapper = styled.div`
   padding: 10px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  ${mobile({ padding: "10px 0px" })} // Remove horizontal padding on mobile devices
 `;
+
 const Left = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
+  ${mobile({ display: "none" })} // Hide the left side on mobile devices
 `;
 
 const Center = styled.div`
@@ -33,31 +38,33 @@ const Right = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  ${mobile({ justifyContent: "flex-end", width: "50%" })} // Adjust alignment and width on mobile devices
 `;
 
 const MenuItem = styled.div`
   font-size: 17px;
   cursor: pointer;
   color: white;
-  margin-left: px;
-  margin-bottom: 10px;
-  margin-right: 5px;
+  margin-left: 10px;
   font-weight: bold;
+  ${mobile({ fontSize: "12px", marginLeft: "5px" })} // Adjust font size and margin left on mobile devices
 `;
 
 const MenuItemBadge = styled(Badge)`
   .MuiBadge-badge {
     background-color: #D8D9C2;
-    color: black; // Optional: Change the text color if needed
-    paddding-bottom: 20px;
+    color: black; // Adjust text color if needed
+    padding-bottom: 0px; // Typo: Corrected 'paddding' to 'padding'
+    margin-top: 5px; // Adjust the margin-top to align the MenuItemBadge
+    ${mobile({ fontSize: "12px", marginRight: "18px" })} // Adjust font size and margin right on mobile devices
   }
 `;
 
 const ShoppingCartIcon = styled(ShoppingCartOutlined)`
-  color: white; // Change the color to white
-  padding-right: 5px; // Optional: Add some padding to the right
-  margin-bottom: 10px;
+  color: white; // Change color to white
+  padding-right: 5px; // Add padding to the right
   cursor: pointer;
+  ${mobile({ fontSize: "20px", marginRight: "20px" })} // Adjust font size and margin right on mobile devices
 `;
 
 const ImgContainer = styled.div`
@@ -71,6 +78,7 @@ const CustomLogo = styled.h1`
 const LogoImage = styled.img`
   height: 100px; /* Adjust the height as per your preference */
   width: 160px; /* Adjust the width as per your preference */
+  ${mobile({ height: "60px", width: "100px" })} // Adjust height and width on mobile devices
 `;
 
 const Navbar = () => {
@@ -90,7 +98,7 @@ const Navbar = () => {
           </ImgContainer>
         </Center>
         <Right>
-          <MenuItem>REGISTER  /</MenuItem>
+          <MenuItem>REGISTER /</MenuItem>
           <MenuItem>SIGN IN</MenuItem>
           <MenuItemBadge badgeContent={4} color="primary" >
             <ShoppingCartIcon />

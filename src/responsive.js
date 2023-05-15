@@ -14,4 +14,5 @@ export const tablet = (props) => {
       ${props}
     }
   `;
+
 };

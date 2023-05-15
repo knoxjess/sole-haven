@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { popularProducts } from "../data";
 import Product from "./Product";
+import { mobile } from "../responsive";
+
 
 
 const Container = styled.div`
@@ -9,6 +11,7 @@ const Container = styled.div`
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   margin-top: -300px; /* Adjust the margin-top value to move the containers up further */
+  ${mobile({ gridTemplateColumns: "repeat(1, 1fr)" })}
 `;
 
 
