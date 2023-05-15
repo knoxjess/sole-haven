@@ -49,12 +49,11 @@ justify-content: space-between;
 const FilterTitle = styled.span`
     font-size: 20px;
     `;
+    
 const FilterSize = styled.select`
     margin-left: 20px;
     padding: 5px;
     font-size: 14px;
-`;
-const FilterSizeOption = styled.option`
 `;
 
 const AddContainer = styled.div`

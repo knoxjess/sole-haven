@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Logo from "../assets/img/logo.png";
-import { Facebook, Instagram, GitHub, Payment } from "@material-ui/icons";
+import { Facebook, Instagram, GitHub } from "@material-ui/icons";
 
 const Container = styled.div`
   display: flex;
