@@ -43,11 +43,6 @@ npm start
 
 ![Untitled_ May 21, 2023 6_43 PM (1)](https://github.com/knoxjess/sole-haven/assets/110634800/8366d76b-b76b-482c-b1bc-9260fe2ea7de)
 
-![Screenshot 2023-05-21 at 7 25 02 PM](https://github.com/knoxjess/sole-haven/assets/110634800/b8ace7d2-c2ec-4908-ade0-c5b2071d96c1)
-
-
-![Screenshot 2023-05-21 at 7 24 39 PM](https://github.com/knoxjess/sole-haven/assets/110634800/28656107-40dd-4cf7-bfa7-5227b8591e18)
-![Screenshot 2023-05-21 at 7 18 03 PM](https://github.com/knoxjess/sole-haven/assets/110634800/4da7f1d2-2197-44e0-8de8-da6bc7dd6c81)
 
 
 
