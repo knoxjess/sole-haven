@@ -5,9 +5,10 @@ import Cart from "./pages/Cart";
 import Products from "./components/Products";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import Pay from "./components/Pay";
 
 const App = () => {
-  return <Home />;
+  return <Pay />;
 
 };
  
